@@ -19,6 +19,8 @@
             var accu = position.coords.accuracy;
             displayData(lat, lng, accu);
         }, (error) => {
+            var txt = document.getElementById("txt");
+            txt.innerHTML = "<h1>error : 位置情報を取得できませんでした</h1>"; 
         }, {
             enableHighAccuracy: true
         });
